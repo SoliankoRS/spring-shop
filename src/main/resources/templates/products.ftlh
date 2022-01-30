@@ -20,12 +20,15 @@
 </#list>
 <hr>
 <h3>Create new product</h3>
-<form action="/product/create" method="post">
+<form action="/product/create" method="post" enctype="multipart/form-data">
     Title: <input type="text" name="title"/><br><br>
     Description: <input type="text" name="description"/><br><br>
     Price: <input type="number" name="price"/><br><br>
     City: <input type="text" name="city"/><br><br>
     Author: <input type="text" name="author"/><br><br>
+    Image1: <input type="file" name="file1"/><br><br>
+    Image2: <input type="file" name="file2"/><br><br>
+    image3: <input type="file" name="file3"/><br><br>
     <input type="submit" value="Add"/>
 </form>
 </body>

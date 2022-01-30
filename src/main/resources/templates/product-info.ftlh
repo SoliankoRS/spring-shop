@@ -6,6 +6,9 @@
 <body>
 <h1>Spring Shop</h1>
 <h4>Product info</h4>
+<#list images as img>
+    <img src="/images/${img.id}" height="60px"/><br>
+</#list>
 <b>Title: </b>${product.title}<br>
 <b>Description: </b>${product.description}<br>
 <b>Price: </b>${product.price}<br>
