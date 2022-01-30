@@ -7,10 +7,16 @@
 <h1>Spring Shop</h1>
 <h4>All products</h4>
 <hr>
+<form action="/" method="get">
+    Find by title product: <input type="text" name="title"><br>
+    <input type="submit" value="Find">
+</form>
 <#list products as product>
     <div>
         <p><b>${product.title} </b> ${product.price}$ | <a href="/product/${product.id}">Open</a></p>
     </div>
+<#else>
+    <h3>No products</h3>
 </#list>
 <hr>
 <h3>Create new product</h3>

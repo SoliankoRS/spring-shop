@@ -1,37 +1,38 @@
 package com.example.springshop.service;
 
 import com.example.springshop.model.Product;
+import com.example.springshop.repository.ProductRepo;
+import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
 import java.util.List;
 
 @Service
+@Slf4j
+@RequiredArgsConstructor
 public class ProductService {
 
-    private List<Product> products = new ArrayList<>();
-    private long id = 0;
+    private final ProductRepo productRepo;
 
-    {
-        products.add(new Product(++id, "Product 1", "Test product.", 100, "Test city", "Test author"));
-        products.add(new Product(++id, "Product 2", "Test product.", 100, "Test city", "Test author"));
-    }
-
-    public List<Product> getAllProducts() {
-        return products;
+    public List<Product> listProduct(String title) {
+        if (title != null) {
+            return productRepo.findAllByTitle(title);
+        } else {
+            return productRepo.findAll();
+        }
     }
 
     public void saveProduct(Product product) {
-        product.setId(++id);
-        products.add(product);
+        log.info("Saving new {}", product);
+        productRepo.save(product);
     }
 
     public void deleteProduct(Long id) {
-        products.removeIf(product -> product.getId().equals(id));
+        productRepo.deleteById(id);
     }
 
     public Product getProductById(Long id) {
-        return products.stream().filter(product -> product.getId().equals(id))
-                .findFirst().orElse(null);
+        return productRepo.findById(id).orElse(null);
     }
 }
