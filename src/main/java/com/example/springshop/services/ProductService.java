@@ -1,8 +1,8 @@
-package com.example.springshop.service;
+package com.example.springshop.services;
 
-import com.example.springshop.model.Image;
-import com.example.springshop.model.Product;
-import com.example.springshop.repository.ProductRepository;
+import com.example.springshop.models.Image;
+import com.example.springshop.models.Product;
+import com.example.springshop.repositories.ProductRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;

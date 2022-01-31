@@ -1,4 +1,4 @@
-package com.example.springshop.model;
+package com.example.springshop.models;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

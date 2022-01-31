@@ -1,7 +1,7 @@
-package com.example.springshop.controller;
+package com.example.springshop.controllers;
 
-import com.example.springshop.model.Product;
-import com.example.springshop.service.ProductService;
+import com.example.springshop.models.Product;
+import com.example.springshop.services.ProductService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

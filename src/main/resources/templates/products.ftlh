@@ -4,7 +4,12 @@
     <title>Spring Shop</title>
 </head>
 <body>
-<h1>Spring Shop</h1>
+<h1>Spring Shop | <a href="/login">Sign in</a></h1>
+<hr>
+<form action="/logout" method="post">
+    <input type="hidden" name="_csrf" value="${_csrf.token}">
+    <input type="submit" value="Logout">
+</form>
 <h4>All products</h4>
 <hr>
 <form action="/" method="get">

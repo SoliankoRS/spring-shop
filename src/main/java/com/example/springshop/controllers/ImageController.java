@@ -1,7 +1,7 @@
-package com.example.springshop.controller;
+package com.example.springshop.controllers;
 
-import com.example.springshop.model.Image;
-import com.example.springshop.repository.ImageRepository;
+import com.example.springshop.models.Image;
+import com.example.springshop.repositories.ImageRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.core.io.InputStreamResource;
 import org.springframework.http.MediaType;
