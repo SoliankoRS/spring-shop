@@ -1,7 +1,7 @@
 package com.example.springshop.models;
 
 
-import com.example.springshop.enums.Role;
+import com.example.springshop.models.enums.Role;
 import lombok.Data;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -44,6 +44,11 @@ public class User implements UserDetails {
     }
 
     // security
+
+    public boolean isAdmin() {
+        return roles.contains(Role.ROLE_ADMIN);
+    }
+
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
         return roles;

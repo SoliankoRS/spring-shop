@@ -7,7 +7,7 @@
 <h1>Spring Shop</h1>
 <h4>Authorization</h4>
 <form action="/login" method="post">
-    eMail: <input type="email" name="username"><br><br>
+    Email: <input type="email" name="username"><br><br>
     Password: <input type="password" name="password"><br><br>
     <input type="hidden" name="_csrf" value="${_csrf.token}">
     <input type="submit" value="Sign in">
