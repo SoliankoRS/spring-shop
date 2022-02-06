@@ -1,6 +1,6 @@
 # spring-shop
 
-A simple pet store project.
+A simple pet-project of store.
 
 Features:
 - User registration
